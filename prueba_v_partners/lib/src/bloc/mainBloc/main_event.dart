@@ -13,11 +13,14 @@ abstract class MainEvent extends Equatable {
 class InitialEvent extends MainEvent {}
 
 class AddDataEvent extends MainEvent {
-  final ModelUser user;
-  AddDataEvent({@required this.user});
+  ModelUser user;
+  AddDataEvent({this.user});
 }
 
-class ShowDataEvent extends MainEvent {
-  final ModelUser user;
-  ShowDataEvent({@required this.user});
+// ignore: must_be_immutable
+class ShowDataEvent extends MainEvent {}
+
+class ShowDetailEvent extends MainEvent {
+  ModelUser user;
+  ShowDetailEvent({@required this.user});
 }

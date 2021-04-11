@@ -10,13 +10,19 @@ abstract class MainState extends Equatable {
 class InitialState extends MainState {}
 
 class AddDataState extends MainState {
-  final ModelUser user;
+  ModelUser user;
 
   AddDataState({@required this.user});
 }
 
 class ShowDataState extends MainState {
-  final ModelUser user;
+  List<ModelUser> user;
 
   ShowDataState({@required this.user});
+}
+
+class ShowDetailState extends MainState {
+  ModelUser user;
+
+  ShowDetailState({@required this.user});
 }

@@ -1,7 +1,7 @@
 class ModelUser {
   String name;
   String lastName;
-  String address;
+  List<String> address;
 
   ModelUser({
     this.name,
